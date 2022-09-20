@@ -3,32 +3,32 @@
 }
 .search-bar {
   display: flex;
-  
+
   align-items: center;
   background-color: var(--elementBGColor);
   width: 17rem;
   gap: 1rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.7rem;
   border-radius: 0.25rem;
 
   input {
     outline: none;
-    font-size: 0.92rem;
+    font-size: inherit;
     padding: 0.35rem;
     background-color: transparent;
     width: calc(100%);
     letter-spacing: 0.05rem;
-    color:var(--modeText);
+    color: var(--modeText);
     border: none;
   }
 }
 ::placeholder {
   color: var(--inputColor);
-  font-size: 0.64rem;
+  font-size: 0.9rem;
 }
 
 .search-logo {
   font-size: 1.2rem;
   font-weight: lighter;
-  color:var(--modeText);
+  color: var(--modeText);
 }

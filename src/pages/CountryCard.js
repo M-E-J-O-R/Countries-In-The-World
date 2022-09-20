@@ -51,7 +51,7 @@ function Card({ data }) {
                         <div className='country-details'>
                             <h4 className='country-name'>{data.name.official}</h4>
 
-                            <p><b>Population:</b>  {data.population}</p>
+                            <p><b>Population:</b>  {data.population.toLocaleString()}</p>
                             <p> <b>Region:</b> {data.region}</p>
                             <p> <b>Capital:</b> {data.capital}</p>
                         </div>
