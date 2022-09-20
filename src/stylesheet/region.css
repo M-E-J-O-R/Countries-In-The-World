@@ -1,0 +1,17 @@
+select {
+  padding: 0.7rem;
+  border-radius: 0.25rem;
+  background-color: var(--elementBGColor);
+  color: var(--modeText);
+  outline: none;
+  border: none;
+}
+select #filter {
+  display: none;
+}
+select option {
+  background-color: var(--elementBGColor);
+  color: var(--modeText);
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=region.css.map */

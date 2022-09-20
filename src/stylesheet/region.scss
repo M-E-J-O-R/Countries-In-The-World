@@ -1,0 +1,22 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+select {
+  padding: 0.7rem;
+  border-radius: 0.25rem;
+  background-color: var(--elementBGColor);
+  color: var(--modeText);
+  outline: none;
+  border: none;
+  #filter {
+    display: none;
+  }
+  option {
+    background-color: var(--elementBGColor);
+    color: var(--modeText);
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+  }
+}
