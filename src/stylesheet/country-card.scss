@@ -34,7 +34,7 @@
 }
 .country-card {
   width: 17.5rem;
-  min-height: 12rem;
+  min-height: 20rem;
   background-color: var(--elementBGColor);
   border-radius: 0.5rem;
   box-shadow: 0px 1px 0.1px 1px var(--elementBGColor);
@@ -48,7 +48,7 @@
     gap: 0.5rem;
 
     .country-name {
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
     p {
       color: var(--inputColor);
@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 500px) {
   .country-card-container{
-    width: 80vw;
+    width: 85vw;
     grid-template-columns: 100%;
     align-items: center;
     

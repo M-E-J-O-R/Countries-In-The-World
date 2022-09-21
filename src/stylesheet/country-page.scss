@@ -102,7 +102,7 @@ small {
     grid-template-columns: 100%;
   }
   .country-flag {
-    justify-self: flex-start;
+    justify-self: center;
     width: 35rem;
     max-height: 22rem;
   }
@@ -127,11 +127,10 @@ small {
     grid-template-columns: repeat(3, 30%);
   }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .country-flag {
     justify-self: flex-start;
     width: 100%;
     max-height: 16rem;
   }
-  
 }

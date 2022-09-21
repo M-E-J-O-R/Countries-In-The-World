@@ -104,7 +104,7 @@ small {
     grid-template-columns: 100%;
   }
   .country-flag {
-    justify-self: flex-start;
+    justify-self: center;
     width: 35rem;
     max-height: 22rem;
   }

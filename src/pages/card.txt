@@ -1,0 +1,57 @@
+ {data.filter(filteredName).map((data, key) => {
+
+
+                    return (<div key={key} onClick={() => navigate(`/countrypage/${key}`)} className="country-card">
+                        <div className="country-flags" style={{
+                            backgroundImage: `url(${data.flags.svg})`
+                        }}></div>
+
+                        <div className='country-details'>
+                            <h4 className='country-name'>{data.name.official}</h4>
+
+                            <p><b>Population:</b>  {data.population.toLocaleString()}</p>
+                            <p> <b>Region:</b> {data.region}</p>
+                            <p> <b>Capital:</b> {data.capital}</p>
+                        </div>
+                    </div>
+
+                    );
+
+                })}
+
+
+
+
+
+
+
+
+
+                ////////////
+
+
+
+                <div className="country-card-container">
+               
+
+                {data.filter(filteredName).map((data, key) => {
+
+
+                    return (<div key={key} onClick={() => navigate(`/countrypage/${key}`)} className="country-card">
+                        <div className="country-flags" style={{
+                            backgroundImage: `url(${data.flags.svg})`
+                        }}></div>
+
+                        <div className='country-details'>
+                            <h4 className='country-name'>{data.name.official}</h4>
+
+                            <p><b>Population:</b>  {data.population.toLocaleString()}</p>
+                            <p> <b>Region:</b> {data.region}</p>
+                            <p> <b>Capital:</b> {data.capital}</p>
+                        </div>
+                    </div>
+
+                    );
+
+                })}
+            </div>
