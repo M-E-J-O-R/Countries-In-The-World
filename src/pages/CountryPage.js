@@ -35,7 +35,8 @@ const CountryPage = () => {
                                 <p> <b> Capital:</b> {data[id].capital}</p>
                             </div>
 
-                            <div className="info-two"><p>Top Level Domain: {data[id].tld}</p>
+                            <div className="info-two">
+                                <p><b>Top Level Domain:</b>  {data[id].tld}</p>
                                 <p> <b>Currencies: </b> Euro</p>
                                 <p>  <b> Language: </b>German , Dutch</p></div>
                             {/* {data[id].currencies} */}
@@ -45,9 +46,15 @@ const CountryPage = () => {
                         <div className="info-three">
                             <h3> Border Countries: </h3>
 
-                            <div className="info-three-country"><p> <small>France</small> </p>
-                                <p> <small>Germany</small> </p>
-                                <p> <small>Netherlands</small> </p></div>
+                            <div className="info-three-country">
+                                {data[id].borders.map((neighbour) => {
+                                    return (
+                                        <p> <small>{neighbour}</small> </p>
+                                    )
+
+                                })}
+
+                            </div>
 
 
                         </div>
@@ -65,5 +72,5 @@ const CountryPage = () => {
         </>
     )
 }
- 
+
 export default CountryPage;
