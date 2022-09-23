@@ -5,13 +5,13 @@ import '../stylesheet/country-card.css';
 import { useNavigate } from 'react-router-dom';
 
 
-const CountryCard = () => {
+const CountryCard = ({userInput}) => {
     const { data } = useContext(CountryContext)
 
     return (
         <>
             {
-                data ? <Card data={data} /> : <p style={{ color: 'white' }}>Loading...</p>
+                data ? <Card data={data} userInput={userInput}  /> : <p style={{ color: 'white' }}>Loading...</p>
             }
         </>
 
@@ -20,21 +20,10 @@ const CountryCard = () => {
 };
 
 
-function Card({ data }) {
-    const { userInput } = useContext(CountryContext);
+function Card({ data, userInput }) {
+  
     let navigate = useNavigate()
-    // function filteredName(data) {
-
-    //     if (data.name.common.toLowerCase().includes(userInput.toLowerCase())) {
-    //         return data;
-    //     }
-    //     else if (data === '') {
-    //         return data;
-    //     }
-    // }
-
-
-
+ 
     return (
 
         <>

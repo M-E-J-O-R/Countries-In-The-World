@@ -10,7 +10,7 @@ import CountryDisplay from './CountryDisplay';
 const CountryContext = createContext()
 
 function App() {
-  const [userInput, setUserInput] = useState('');
+  
   const [url, setUrl] = useState('https://restcountries.com/v3.1/all');
   const [isActive, setIsActive] = useState(false)
   const { data } = useFetch(url)
@@ -22,7 +22,7 @@ function App() {
   return (
     <>
    
-    <CountryContext.Provider value={{ userInput, setUserInput, url, setUrl,isActive,setIsActive,data,isActivated }} >
+    <CountryContext.Provider value={{  url, setUrl,isActive,setIsActive,data,isActivated }} >
 
       
       

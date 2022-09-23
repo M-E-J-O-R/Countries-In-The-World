@@ -1,13 +1,11 @@
-import {useContext} from 'react'
-import { CountryContext } from './App';
 import '../stylesheet/search-bar.css';
 
 import {HiSearch} from 'react-icons/hi'
 
 
 
-const SearchBar = () => {
-    let { userInput, setUserInput } = useContext(CountryContext)
+const SearchBar = ({userInput,setUserInput}) => {
+    // let { userInput, setUserInput } = useContext(CountryContext)
     
 
     return (

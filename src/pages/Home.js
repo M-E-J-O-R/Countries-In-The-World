@@ -1,5 +1,7 @@
+import {useState} from 'react'
 import ModeToggle from "./ModeToggle";
 import SearchBar from "./SearchBar";
+
 import Region from "./Region";
 import '../stylesheet/home.css';
 import CountryCard from './CountryCard';
@@ -9,6 +11,7 @@ import { CountryContext } from "./App";
 
 const Home = () => {
     const {isActivated} = useContext(CountryContext)
+    const [userInput, setUserInput] = useState('');
 
     return (
         <div className={`container ${isActivated()}
@@ -19,12 +22,12 @@ const Home = () => {
                 <ModeToggle />
                 <div className="home">
                     <div className="home-search">
-                        <SearchBar />
+                        <SearchBar userInput={userInput} setUserInput={setUserInput}/>
 
-                        <Region />
+                        <Region  />
 
                     </div>
-                    <CountryCard />
+                    <CountryCard userInput={userInput}  />
 
                 </div>
         
