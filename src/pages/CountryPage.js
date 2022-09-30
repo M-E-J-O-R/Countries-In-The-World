@@ -4,6 +4,9 @@ import { MdKeyboardBackspace } from "react-icons/md";
 import { useNavigate, useParams } from 'react-router-dom';
 import { CountryContext } from './App';
 import { useContext } from 'react';
+
+
+
 const CountryPage = () => {
     const { data, isActivated } = useContext(CountryContext)
     const navigate = useNavigate()
@@ -47,12 +50,15 @@ const CountryPage = () => {
                             <h3> Border Countries: </h3>
 
                             <div className="info-three-country">
-                                {data[id].borders.map((neighbour) => {
+                                {console.log(data)}
+
+                                {(data[id].borders === undefined) ? '' : data[id].borders.map((neighbour, index) => {
                                     return (
-                                        <p> <small>{neighbour}</small> </p>
+                                        <p key={index}> <small>{neighbour}</small> </p>
                                     )
 
                                 })}
+
 
                             </div>
 

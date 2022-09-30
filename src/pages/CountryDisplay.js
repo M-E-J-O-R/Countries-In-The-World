@@ -6,11 +6,11 @@ import CountryPage from "./CountryPage";
 const CountryDisplay = () => {
     const { data } = useContext(CountryContext)
 
-
+//: 
     return (
 
         <>
-        {data&& <CountryPage/>}
+        {data&&<CountryPage/>}
 
 
         </>
