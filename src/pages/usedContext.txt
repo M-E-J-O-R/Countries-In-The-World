@@ -1,1 +1,0 @@
-userInput , setUserInput, url, setUrl,isActive, setIsActive

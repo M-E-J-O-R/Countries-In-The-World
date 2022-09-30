@@ -5,13 +5,13 @@ import '../stylesheet/country-card.css';
 import { useNavigate } from 'react-router-dom';
 
 
-const CountryCard = ({userInput}) => {
+const CountryCard = ({ userInput }) => {
     const { data } = useContext(CountryContext)
 
     return (
         <>
             {
-                data ? <Card data={data} userInput={userInput}  /> : <p style={{ color: 'white' }}>Loading...</p>
+                data ? <Card data={data} userInput={userInput} /> : <p>Loading...</p>
             }
         </>
 
@@ -21,9 +21,9 @@ const CountryCard = ({userInput}) => {
 
 
 function Card({ data, userInput }) {
-  
+
     let navigate = useNavigate()
- 
+
     return (
 
         <>
@@ -31,28 +31,34 @@ function Card({ data, userInput }) {
             <div className="country-card-container">
 
 
-
                 {data.map((datas, index) => {
-                
-                        if (datas.name.common.toLowerCase().includes(userInput.toLowerCase()) || userInput === '') {
-                            return (<div key={index} onClick={() => navigate(`/countrypage/${index}`)} className="country-card">
-                                <div className="country-flags" style={{
-                                    backgroundImage: `url(${datas.flags.svg})`
-                                }}></div>
+                    return (
+                        <div key={index} onClick={() => navigate(`/countrypage/${index}`)} className="country-card">
 
-                                <div className='country-details'>
-                                    <h4 className='country-name'>{datas.name.official}</h4>
+                            {
 
-                                    <p><b>Population:</b>  {datas.population}</p>
-                                    <p> <b>Region:</b> {datas.region}</p>
-                                    <p> <b>Capital:</b> {datas.capital}</p>
-                                </div>
-                            </div>
+                                (datas.name.common.toLowerCase().includes(userInput.toLowerCase()) || userInput === '') &&
 
-                            )
-                        }
+                                (<>
 
-                   
+                                    <div className="country-flags" style={{
+                                        backgroundImage: `url(${datas.flags.svg})`
+                                    }}></div>
+
+                                    <div className='country-details'>
+                                        <h4 className='country-name'>{datas.name.official}</h4>
+
+                                        <p><b>Population:</b>  {datas.population}</p>
+                                        <p> <b>Region:</b> {datas.region}</p>
+                                        <p> <b>Capital:</b> {datas.capital}</p>
+                                    </div>
+                                </>
+
+                                )
+
+                            }</div>
+
+                    )
 
 
                 })}

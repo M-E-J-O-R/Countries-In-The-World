@@ -5,18 +5,17 @@
 }
 
 :root {
+  --modeText: hsl(200, 15%, 8%);
+  --inputColor: rgb(22, 21, 21);
+  --modeBGColor: #e8eddf;
+  --elementBGColor: hsl(0, 0%, 100%);
+}
+
+.light-mode {
   --elementBGColor: hsl(209, 23%, 22%);
   --modeBGColor: hsl(207, 26%, 17%);
   --modeText: white;
   --inputColor: hsl(260, 100%, 98%);
-}
-
-.light-mode {
-  --modeText: hsl(200, 15%, 8%);
-  --inputColor: rgb(22, 21, 21);
-  --modeBGColor: #e8eddf;
-
-  --elementBGColor: hsl(0, 0%, 100%);
 }
 
 .container {

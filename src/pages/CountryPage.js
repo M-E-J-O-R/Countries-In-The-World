@@ -50,7 +50,7 @@ const CountryPage = () => {
                             <h3> Border Countries: </h3>
 
                             <div className="info-three-country">
-                                {console.log(data)}
+                              
 
                                 {(data[id].borders === undefined) ? '' : data[id].borders.map((neighbour, index) => {
                                     return (
