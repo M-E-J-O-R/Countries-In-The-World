@@ -37,7 +37,12 @@
   min-height: 20rem;
   background-color: var(--elementBGColor);
   border-radius: 0.5rem;
+  transition:all 0.5s ;
   box-shadow: 0px 1px 0.1px 1px var(--elementBGColor);
+
+  &:hover {
+    transform: scale(1.05);
+  }
   img {
     width: 17.5rem;
   }
@@ -61,16 +66,14 @@
 }
 
 @media screen and (max-width: 500px) {
-  .country-card-container{
+  .country-card-container {
     width: 85vw;
     grid-template-columns: 100%;
     align-items: center;
-    
-
   }
-  .country-card, .country-flags{
+  
+  .country-card,
+  .country-flags {
     width: 100%;
-
   }
-
 }
