@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: -5px 0 5px gray;
 }
 
 .mode {
