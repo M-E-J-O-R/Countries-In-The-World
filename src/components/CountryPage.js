@@ -23,18 +23,18 @@ const CountryPage = () => {
         }
     }
     objectMap()
-  
+
 
 
     return (
         <>
             <ModeToggle />
-            {console.log(languages, dataId)}
+
             <div className={`country-page ${isActivated()}
 `}>
 
                 <button onClick={() => navigate(-1)}><  MdKeyboardBackspace className='back-logo' /> Back</button>
-                
+
 
                 <div className="details">
 
