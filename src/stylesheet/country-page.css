@@ -47,6 +47,10 @@ p {
   margin: 1.2rem 0;
 }
 
+.spaced {
+  padding-right: 0.25rem;
+}
+
 .info-three {
   margin-top: 1.6rem;
   display: flex;
