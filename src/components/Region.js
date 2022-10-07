@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { CountryContext } from './App';
+import { CountryContext } from '../pages/App';
 import '../stylesheet/region.css';
 
 const Region = () => {

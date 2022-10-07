@@ -2,7 +2,7 @@ import '../stylesheet/country-page.css';
 import ModeToggle from './ModeToggle';
 import { MdKeyboardBackspace } from "react-icons/md";
 import { useNavigate, useParams } from 'react-router-dom';
-import { CountryContext } from './App';
+import { CountryContext } from '../pages/App';
 import { useContext } from 'react';
 
 
@@ -11,13 +11,30 @@ const CountryPage = () => {
     const { data, isActivated } = useContext(CountryContext)
     const navigate = useNavigate()
     let { id } = useParams()
+    let currencies = []
+    let languages = []
+    let dataId = data[id]
+    function objectMap() {
+        for (let x in dataId.currencies) {
+            currencies.push(dataId.currencies[x].name)
+        }
+        for (let y in dataId.languages) {
+            languages.push(dataId.languages[y])
+        }
+    }
+    objectMap()
+  
+
+
     return (
         <>
             <ModeToggle />
+            {console.log(languages, dataId)}
             <div className={`country-page ${isActivated()}
 `}>
 
                 <button onClick={() => navigate(-1)}><  MdKeyboardBackspace className='back-logo' /> Back</button>
+                
 
                 <div className="details">
 
@@ -40,9 +57,20 @@ const CountryPage = () => {
 
                             <div className="info-two">
                                 <p><b>Top Level Domain:</b>  {data[id].tld}</p>
-                                <p> <b>Currencies: </b> Euro</p>
-                                <p>  <b> Language: </b>German , Dutch</p></div>
-                            {/* {data[id].currencies} */}
+                                <p>
+                                    <b>Currencies: </b>
+                                    {currencies.map((currency, index) => {
+                                        return <span key={index} className='spaced'>{currency}</span>
+                                    })}
+                                </p>
+                                <p>
+                                    <b> Language: </b>
+                                    {languages.map((language, index) => {
+                                        return <span className='spaced' key={index}>{language}</span>
+                                    })}
+                                </p>
+                            </div>
+
 
                         </div>
 
@@ -50,7 +78,7 @@ const CountryPage = () => {
                             <h3> Border Countries: </h3>
 
                             <div className="info-three-country">
-                              
+
 
                                 {(data[id].borders === undefined) ? '' : data[id].borders.map((neighbour, index) => {
                                     return (

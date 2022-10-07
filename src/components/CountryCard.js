@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 
-import { CountryContext } from './App';
+import { CountryContext } from '../pages/App';
 import '../stylesheet/country-card.css';
 import { useNavigate } from 'react-router-dom';
 
 
 const CountryCard = ({ userInput }) => {
     const { data } = useContext(CountryContext)
+    
 
     return (
         <>

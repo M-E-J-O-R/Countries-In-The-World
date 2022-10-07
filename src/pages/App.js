@@ -1,6 +1,6 @@
 import {createContext,useState} from 'react'
 import Home from "./Home"
-import useFetch from './useFetch';
+import useFetch from '../hooks/useFetch';
 import {Routes,Route} from 'react-router-dom'
 
 import Error from './Error'

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CountryContext } from "./App";
-import CountryPage from "./CountryPage";
+import CountryPage from "../components/CountryPage";
 
 
 const CountryDisplay = () => {

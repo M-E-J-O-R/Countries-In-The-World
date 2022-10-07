@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { FaMoon } from 'react-icons/fa';
 import '../stylesheet/mode-toggle.css';
-import { CountryContext } from './App';
+import { CountryContext } from '../pages/App';
 
 const ModeToggle = () => {
     const {isActive, setIsActive,isActivated} = useContext(CountryContext);

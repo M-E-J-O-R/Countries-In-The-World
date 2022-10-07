@@ -1,10 +1,10 @@
 import {useState} from 'react'
-import ModeToggle from "./ModeToggle";
-import SearchBar from "./SearchBar";
+import ModeToggle from "../components/ModeToggle";
+import SearchBar from "../components/SearchBar";
 
-import Region from "./Region";
+import Region from "../components/Region";
 import '../stylesheet/home.css';
-import CountryCard from './CountryCard';
+import CountryCard from '../components/CountryCard';
 import { useContext } from 'react';
 import { CountryContext } from "./App";
 
