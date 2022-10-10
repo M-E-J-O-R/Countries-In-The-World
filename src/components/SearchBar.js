@@ -21,6 +21,7 @@ const SearchBar = ({userInput,setUserInput}) => {
                     value={userInput}
                     onChange={(e)=>setUserInput(e.target.value)}
                 />
+                
 
 
             </div>

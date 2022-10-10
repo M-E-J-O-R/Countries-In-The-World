@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CountryCard = ({ userInput }) => {
     const { data } = useContext(CountryContext)
-    
+
 
     return (
         <>
@@ -34,30 +34,28 @@ function Card({ data, userInput }) {
 
                 {data.map((datas, index) => {
                     return (
+                        (datas.name.common.toLowerCase().includes(userInput.toLowerCase()) || userInput === '') &&
+
                         <div key={index} onClick={() => navigate(`/countrypage/${index}`)} className="country-card">
 
-                            {
 
-                                (datas.name.common.toLowerCase().includes(userInput.toLowerCase()) || userInput === '') &&
 
-                                (<>
+                            <section className="country-flags" style={{
+                                backgroundImage: `url(${datas.flags.svg})`
+                            }}></section>
 
-                                    <section className="country-flags" style={{
-                                        backgroundImage: `url(${datas.flags.svg})`
-                                    }}></section>
+                            <section className='country-details'>
+                                <h4 className='country-name'>{datas.name.official}</h4>
 
-                                    <section className='country-details'>
-                                        <h4 className='country-name'>{datas.name.official}</h4>
+                                <p><b>Population:</b>  {datas.population}</p>
+                                <p> <b>Region:</b> {datas.region}</p>
+                                <p> <b>Capital:</b> {datas.capital}</p>
+                            </section>
 
-                                        <p><b>Population:</b>  {datas.population}</p>
-                                        <p> <b>Region:</b> {datas.region}</p>
-                                        <p> <b>Capital:</b> {datas.capital}</p>
-                                    </section>
-                                </>
 
-                                )
 
-                            }</div>
+
+                        </div>
 
                     )
 
