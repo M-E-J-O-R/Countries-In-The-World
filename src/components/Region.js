@@ -14,29 +14,6 @@ const Region = () => {
             setUrl(`https://restcountries.com/v3.1/all`);
         }
 
-        // if (regionValue === 'africa') {
-        //     setUrl(`https://restcountries.com/v3.1/region/africa`);
-        //     console.log(url)
-        // }
-        // else if (regionValue === 'asia') {
-        //     setUrl(`https://restcountries.com/v3.1/region/asia`);
-        //     console.log(url)
-        // }
-        // else if (regionValue === 'americas') {
-        //     setUrl('https://restcountries.com/v3.1/region/americas');
-        //     console.log(url)
-        // }
-        // else if (regionValue === 'europe') {
-        //     setUrl('https://restcountries.com/v3.1/region/europe');
-        //     console.log(url)
-        // }
-        // else if (regionValue === 'oceania') {
-        //     setUrl('https://restcountries.com/v3.1/region/oceania');
-        //     console.log(url)
-        // }
-        // else  {
-        //     setUrl('https://restcountries.com/v3.1/all');
-        //  }
 
 
     };

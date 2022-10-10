@@ -45,17 +45,17 @@ const CountryPage = () => {
 
                     <div className="info-container">
 
-                        <div className="info-header">
-                            <div className="info-one">
+                        <section className="info-header">
+                            <article className="info-one">
                                 <h3>{data[id].name.common} </h3>
                                 <p> <b> Native Name:</b> {data[id].name.official}</p>
                                 <p> <b> Population:</b> {data[id].population}</p>
                                 <p> <b>  Region:</b>{data[id].region}</p>
                                 <p> <b> Sub-Region:</b> {data[id].subregion}</p>
                                 <p> <b> Capital:</b> {data[id].capital}</p>
-                            </div>
+                            </article>
 
-                            <div className="info-two">
+                            <article className="info-two">
                                 <p><b>Top Level Domain:</b>  {data[id].tld}</p>
                                 <p>
                                     <b>Currencies: </b>
@@ -69,15 +69,15 @@ const CountryPage = () => {
                                         return <span className='spaced' key={index}>{language}</span>
                                     })}
                                 </p>
-                            </div>
+                            </article>
 
 
-                        </div>
+                        </section>
 
-                        <div className="info-three">
+                        <section className="info-three">
                             <h3> Border Countries: </h3>
 
-                            <div className="info-three-country">
+                            <article className="info-three-country">
 
 
                                 {(data[id].borders === undefined) ? '' : data[id].borders.map((neighbour, index) => {
@@ -88,10 +88,10 @@ const CountryPage = () => {
                                 })}
 
 
-                            </div>
+                            </article>
 
 
-                        </div>
+                        </section>
 
                     </div>
 

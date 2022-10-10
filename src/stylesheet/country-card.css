@@ -1,15 +1,3 @@
-:root {
-  --primaryColor: white;
-  --secondaryColor: hsl(209, 23%, 22%);
-  --backgroundColor: hsl(207, 26%, 17%);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .country-card-container {
   display: grid;
   padding: 2rem;
