@@ -24,7 +24,9 @@ const CountryCard = ({ userInput }) => {
 function Card({ data, userInput }) {
 
     let navigate = useNavigate()
-
+    let sortedData =[...data]
+    sortedData.sort( (a, b)=> a.name.official> b.name.official ?1:-1 )
+   
     return (
 
         <>
@@ -32,11 +34,11 @@ function Card({ data, userInput }) {
             <div className="country-card-container">
 
 
-                {data.map((datas, index) => {
+                {sortedData.map((datas, index) => {
                     return (
                         (datas.name.common.toLowerCase().includes(userInput.toLowerCase()) || userInput === '') &&
 
-                        <div key={index} onClick={() => navigate(`/countrypage/${index}`)} className="country-card">
+                        <div id={datas.name.official.toLowerCase()} key={index} onClick={() => navigate(`/countrypage/${datas.name.official}`)} className="country-card">
 
 
 

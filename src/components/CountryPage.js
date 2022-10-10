@@ -11,9 +11,16 @@ const CountryPage = () => {
     const { data, isActivated } = useContext(CountryContext)
     const navigate = useNavigate()
     let { id } = useParams()
+    function handleSelection(element) {
+        if (element.name.official === id) {
+            
+            return element
+        }
+    }
+    let selectedCountry = data.filter(handleSelection)
     let currencies = []
     let languages = []
-    let dataId = data[id]
+    let dataId = selectedCountry[0] 
     function objectMap() {
         for (let x in dataId.currencies) {
             currencies.push(dataId.currencies[x].name)
@@ -29,8 +36,8 @@ const CountryPage = () => {
     return (
         <>
             <ModeToggle />
-
-            <div className={`country-page ${isActivated()}
+        {console.log(dataId)}
+             <div className={`country-page ${isActivated()}
 `}>
 
                 <button onClick={() => navigate(-1)}><  MdKeyboardBackspace className='back-logo' /> Back</button>
@@ -38,7 +45,7 @@ const CountryPage = () => {
 
                 <div className="details">
 
-                    <img className='country-flag' src={data[id].flags.svg} alt="country-flag" />
+                    <img className='country-flag' src={dataId.flags.svg} alt="country-flag" />
 
 
 
@@ -47,16 +54,16 @@ const CountryPage = () => {
 
                         <section className="info-header">
                             <article className="info-one">
-                                <h3>{data[id].name.common} </h3>
-                                <p> <b> Native Name:</b> {data[id].name.official}</p>
-                                <p> <b> Population:</b> {data[id].population}</p>
-                                <p> <b>  Region:</b>{data[id].region}</p>
-                                <p> <b> Sub-Region:</b> {data[id].subregion}</p>
-                                <p> <b> Capital:</b> {data[id].capital}</p>
+                                <h3>{dataId.name.common} </h3>
+                                <p> <b> Native Name:</b> {dataId.name.official}</p>
+                                <p> <b> Population:</b> {dataId.population}</p>
+                                <p> <b>  Region:</b>{dataId.region}</p>
+                                <p> <b> Sub-Region:</b> {dataId.subregion}</p>
+                                <p> <b> Capital:</b> {dataId.capital}</p>
                             </article>
 
                             <article className="info-two">
-                                <p><b>Top Level Domain:</b>  {data[id].tld}</p>
+                                <p><b>Top Level Domain:</b>  {dataId.tld}</p>
                                 <p>
                                     <b>Currencies: </b>
                                     {currencies.map((currency, index) => {
@@ -80,7 +87,7 @@ const CountryPage = () => {
                             <article className="info-three-country">
 
 
-                                {(data[id].borders === undefined) ? '' : data[id].borders.map((neighbour, index) => {
+                                {(dataId.borders === undefined) ? '' : dataId.borders.map((neighbour, index) => {
                                     return (
                                         <p key={index}> <small>{neighbour}</small> </p>
                                     )
@@ -93,7 +100,7 @@ const CountryPage = () => {
 
                         </section>
 
-                    </div>
+                    </div> 
 
                 </div>
 
@@ -102,7 +109,7 @@ const CountryPage = () => {
 
 
 
-            </div>
+            </div> 
         </>
     )
 }
