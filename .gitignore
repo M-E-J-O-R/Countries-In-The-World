@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+#map
+.map
 # production
 /build
 
