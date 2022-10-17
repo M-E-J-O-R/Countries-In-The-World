@@ -6,7 +6,7 @@ import CountryPage from "../components/CountryPage";
 const CountryDisplay = () => {
     const { data } = useContext(CountryContext)
 
-//: 
+
     return (
 
         <>

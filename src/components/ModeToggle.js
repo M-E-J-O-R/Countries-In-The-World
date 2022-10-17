@@ -4,10 +4,10 @@ import '../stylesheet/mode-toggle.css';
 import { CountryContext } from '../pages/App';
 
 const ModeToggle = () => {
-    const {isActive, setIsActive,isActivated} = useContext(CountryContext);
+    const {setIsActive,isActivated} = useContext(CountryContext);
     
     function activeToggle() {
-        setIsActive(!isActive);
+        setIsActive(prev=>!prev);
     }
    
  

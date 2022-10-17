@@ -1,7 +1,6 @@
 import {useState} from 'react'
 import ModeToggle from "../components/ModeToggle";
 import SearchBar from "../components/SearchBar";
-
 import Region from "../components/Region";
 import '../stylesheet/home.css';
 import CountryCard from '../components/CountryCard';

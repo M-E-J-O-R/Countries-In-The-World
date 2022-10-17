@@ -24,7 +24,7 @@
   min-height: 20rem;
   background-color: var(--elementBGColor);
   border-radius: 0.5rem;
-  transition: all 0.5s;
+  transition: all 0.1s;
   box-shadow: 0px 1px 0.1px 1px var(--elementBGColor);
 }
 .country-card:hover {
@@ -59,6 +59,6 @@
   }
   .country-card,
 .country-flags {
-    width: 100%;
+    width: 18.5rem;
   }
 }/*# sourceMappingURL=country-card.css.map */

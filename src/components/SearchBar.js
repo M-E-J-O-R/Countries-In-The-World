@@ -5,7 +5,7 @@ import {HiSearch} from 'react-icons/hi'
 
 
 const SearchBar = ({userInput,setUserInput}) => {
-    // let { userInput, setUserInput } = useContext(CountryContext)
+   
     
 
     return (

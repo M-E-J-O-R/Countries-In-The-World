@@ -13,14 +13,15 @@ const CountryPage = () => {
     let { id } = useParams()
     function handleSelection(element) {
         if (element.name.official === id) {
-            
+
             return element
         }
     }
     let selectedCountry = data.filter(handleSelection)
     let currencies = []
     let languages = []
-    let dataId = selectedCountry[0] 
+    let dataId = selectedCountry[0]
+
     function objectMap() {
         for (let x in dataId.currencies) {
             currencies.push(dataId.currencies[x].name)
@@ -36,8 +37,8 @@ const CountryPage = () => {
     return (
         <>
             <ModeToggle />
-        {console.log(dataId)}
-             <div className={`country-page ${isActivated()}
+            {console.log(dataId)}
+            <div className={`country-page ${isActivated()}
 `}>
 
                 <button onClick={() => navigate(-1)}><  MdKeyboardBackspace className='back-logo' /> Back</button>
@@ -100,7 +101,7 @@ const CountryPage = () => {
 
                         </section>
 
-                    </div> 
+                    </div>
 
                 </div>
 
@@ -109,7 +110,7 @@ const CountryPage = () => {
 
 
 
-            </div> 
+            </div>
         </>
     )
 }
