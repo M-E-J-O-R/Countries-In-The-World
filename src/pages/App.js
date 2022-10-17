@@ -14,7 +14,7 @@ function App() {
   const [url, setUrl] = useState('https://restcountries.com/v3.1/all');
   const [isActive, setIsActive] = useState(false)
   const { data } = useFetch(url)
-
+ 
   useEffect(() => {
     const darkMode = JSON.parse(localStorage.getItem('darkMode'))
     darkMode && setIsActive(darkMode)

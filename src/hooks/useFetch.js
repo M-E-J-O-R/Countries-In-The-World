@@ -10,7 +10,8 @@ const useFetch = (url) => {
             .catch(err=>console.log(err))
             
     }, [url]);
-     return {data,setData}
+     return {data}
 };
+
 
 export default useFetch;
