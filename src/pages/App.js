@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import Home from "./Home"
 import useFetch from '../hooks/useFetch';
 import { Routes, Route } from 'react-router-dom'
@@ -15,8 +15,19 @@ function App() {
   const [isActive, setIsActive] = useState(false)
   const { data } = useFetch(url)
 
+  useEffect(() => {
+    const darkMode = JSON.parse(localStorage.getItem('darkMode'))
+    darkMode && setIsActive(darkMode)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(isActive))
+  }, [isActive])
+
+
+
   function isActivated() {
-    return isActive ? 'light-mode' : '';
+    return isActive ? 'dark-mode' : '';
   }
 
   return (

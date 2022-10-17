@@ -37,7 +37,6 @@ const CountryPage = () => {
     return (
         <>
             <ModeToggle />
-            {console.log(dataId)}
             <div className={`country-page ${isActivated()}
 `}>
 
