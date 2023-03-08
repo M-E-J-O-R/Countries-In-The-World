@@ -24,9 +24,9 @@ const CountryCard = ({ userInput }) => {
 function Card({ data, userInput }) {
 
     let navigate = useNavigate()
-    let sortedData =[...data]
-    sortedData.sort( (a, b)=> a.name.official> b.name.official ?1:-1 )
-   
+    let sortedData = [...data]
+    sortedData.sort((a, b) => a.name.official > b.name.official ? 1 : -1)
+
     return (
 
         <>
